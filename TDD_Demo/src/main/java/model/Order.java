@@ -25,16 +25,21 @@ public class Order {
 	public BigDecimal getTaxRate() {
 		BigDecimal result = new BigDecimal("0.0000");
 		switch(state) {
-			case "UT":	result = new BigDecimal("0.0685"); 
-						break;
-			case "NV": 	result = new BigDecimal("0.0800"); 
-						break;
-			case "TX": 	result = new BigDecimal("0.0625"); 
-						break;
-			case "AL": 	result = new BigDecimal("0.0400"); 
-						break;
-			case "CA": 	result = new BigDecimal("0.0825"); 
-						break;
+			case "UT":	
+				result = new BigDecimal("0.0685"); 
+				break;
+			case "NV": 	
+				result = new BigDecimal("0.0800"); 
+				break;
+			case "TX": 	
+				result = new BigDecimal("0.0625"); 
+				break;
+			case "AL": 	
+				result = new BigDecimal("0.0400"); 
+				break;
+			case "CA": 	
+				result = new BigDecimal("0.0825"); 
+				break;
 		}
 		return result;
 	}
