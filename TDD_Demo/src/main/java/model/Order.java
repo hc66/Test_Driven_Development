@@ -22,7 +22,7 @@ public class Order {
 		return result;
 	}
 	
-	public BigDecimal getTaxRate() {
+	private BigDecimal getTaxRate() {
 		BigDecimal result = new BigDecimal("0.0000");
 		switch(state) {
 			case "UT":	
@@ -44,7 +44,7 @@ public class Order {
 		return result;
 	}
 	
-	public BigDecimal getDiscount() {
+	private BigDecimal getDiscount() {
 		BigDecimal result = new BigDecimal("0.00");
 		BigDecimal total_before_discount = price.multiply(new BigDecimal(quantity));		
 		if(total_before_discount.compareTo(ONE_THOUSAND)>=0&&total_before_discount.compareTo(FIVE_THOUSAND)<0) {
